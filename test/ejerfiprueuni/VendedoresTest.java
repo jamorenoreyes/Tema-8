@@ -47,7 +47,7 @@ public class VendedoresTest {
         Vendedores instance=new Vendedores();
         instance.cargar_datos("Alicante");
         //Vendedor v4=
-        Vendedor vend=new Vendedor(7,"Paco","Jcrgty","Alicante","Santa Pola","calle");
+        Vendedor vend=new Vendedor(7,"Adolfo","El_rapido","Alicante","Santa Pola","calle_nueva");
         boolean expResult = true;
         boolean result = instance.anyadir_Vendedor(vend);
         assertEquals(expResult, result);
@@ -64,7 +64,7 @@ public class VendedoresTest {
         int numvend = 1;
         Vendedores instance = new Vendedores();
         instance.cargar_datos("Alicante");
-        Vendedor expResult = new Vendedor(1,"JFJ","JJ","Alicante","elche","calle" );
+        Vendedor expResult = new Vendedor(1,"JFJ","Vende_todo","Alicante","elche","Avda_Libertad");
         Vendedor result = instance.buscar_Vendedor(numvend);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
