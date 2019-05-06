@@ -62,7 +62,7 @@ public ArrayList buscar_Vendedor(String provincia){
 
 public void cargar_datos(String provincia){
 
- Vendedor v1=new Vendedor(1,"JFJ","JJ",provincia,"elche","calle" );
+    Vendedor v1=new Vendedor(1,"JFJ","JJ",provincia,"elche","calle" );
     Vendedor v2=new Vendedor(2,"Antonio","JcccJ",provincia,"Alicane","Espronceda");
     Vendedor v3=new Vendedor(3,"Luis","JcrgtyeccJ",provincia,"Santa Pola","Pedro Juan");
     Vendedor v4=new Vendedor(4,"Paco","JcrgtyeccJ",provincia,"Sant","Jua");
