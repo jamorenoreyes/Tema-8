@@ -84,7 +84,7 @@ private String nomvend,nombrecomer,provincia,localidad,direccion;
             return false;
         }
         final Vendedor other = (Vendedor) obj;
-        if (this.numvend != other.numvend && this.nomvend.equals(other.nomvend)) {
+        if (this.numvend != other.numvend || !this.nomvend.equals(other.nomvend)) {
             return false;
         }
         return true;
