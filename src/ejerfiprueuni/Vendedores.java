@@ -51,7 +51,7 @@ public ArrayList buscar_Vendedor(String provincia){
     for(int x=0;x<vende.size();x++)
         {
         temp=(Vendedor) vende.get(x);
-        if(temp.getProvincia()==provincia) 
+        if(temp.getProvincia().equals(provincia)) 
             {
             vende1.add(temp);
             }
