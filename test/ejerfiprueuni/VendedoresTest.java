@@ -64,7 +64,7 @@ public class VendedoresTest {
         int numvend = 1;
         Vendedores instance = new Vendedores();
         instance.cargar_datos("Alicante");
-        Vendedor expResult = new Vendedor(1,"JFJ","Vende_todo","Alicante","elche","Avda_Libertad");
+        Vendedor expResult = new Vendedor(1,"Pedro","Vende_todo","Alicante","elche","Avda_Libertad");
         Vendedor result = instance.buscar_Vendedor(numvend);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
