@@ -20,8 +20,9 @@ import org.junit.runners.Parameterized;
  */
 public class Parametrizado {
     @Parameterized.Parameters
+    //¿Tengo que crear un objeto vendedor?
     public static Iterable data(){
-        return Arrays.asList(new Object[][]{{1,"JFJ","JJ","Alicante","elche","calle"},{2,"Antonio","JcccJ","Alicante","Alicane","Espronceda"},{3,"Luis","JcrgtyeccJ","Alicante","Santa Pola","Pedro Juan"},{6,"Leopoldo","Vende_todo","Madrid","Alconbendas","Avda.Libertad"}});
+        return Arrays.asList(new Object[][]{{1,"Pedro","Vende_todo","Alicante","elche","Avda_Libertad"},{2,"Antonio","Numero_uno","Alicante","Alicante","Espronceda"},{3,"Luis","Charlatan","Alicante","Santa Pola","Pedro Juan"},{6,"Leopoldo","Vende_todo","Madrid","Alconbendas","Avda.Libertad"}});
         }
     private int numvend;
     private String nomvend,nombrecomer,provincia,localidad,direccion;
@@ -37,7 +38,7 @@ public class Parametrizado {
     @Test
     
     public void Eliminar_vendedor(){
-     //  Vendedor.             // tank.fill(relleno);
+      // Vendedores.eliminar_Vendedor(numvend);    // tank.fill(relleno);
         //double nivel=tank.getTankLevel();
         //Assert.assertEquals(esperado,nivel,0.0);
     }
