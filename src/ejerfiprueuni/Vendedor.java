@@ -61,4 +61,33 @@ private String nomvend,nombrecomer,provincia,localidad,direccion;
         this.direccion = direccion;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 13 * hash + this.numvend;
+        return hash;
+    }
+/**
+ * Metodo equals sobreescrito para que compare nombre y numero de vendedor
+ * @param obj
+ * @return 
+ */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vendedor other = (Vendedor) obj;
+        if (this.numvend != other.numvend && this.nomvend.equals(other.nomvend)) {
+            return false;
+        }
+        return true;
+    }
+
 }
