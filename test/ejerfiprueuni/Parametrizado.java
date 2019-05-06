@@ -5,18 +5,24 @@
  */
 package ejerfiprueuni;
 
+import java.util.Arrays;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.runners.Parameterized;
 
 /**
  *
  * @author Juanan
  */
 public class Parametrizado {
+    @Parameterized.Parameters
+    public static Iterable data(){
+        return Arrays.asList(new Object[][]{{1,"JFJ","JJ","Alicante","elche","calle"},{2,"Antonio","JcccJ","Alicante","Alicane","Espronceda"},{3,"Luis","JcrgtyeccJ","Alicante","Santa Pola","Pedro Juan"},{6,"Leopoldo","Vende_todo","Madrid","Alconbendas","Avda.Libertad"}});
+        }
     
     public Parametrizado() {
     }
