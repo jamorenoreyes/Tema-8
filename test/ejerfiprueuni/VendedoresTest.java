@@ -46,7 +46,6 @@ public class VendedoresTest {
         System.out.println("anyadir_Vendedor");
         Vendedores instance=new Vendedores();
         instance.cargar_datos("Alicante");
-        //Vendedor v4=
         Vendedor vend=new Vendedor(7,"Adolfo","El_rapido","Alicante","Santa Pola","calle_nueva");
         boolean expResult = true;
         boolean result = instance.anyadir_Vendedor(vend);

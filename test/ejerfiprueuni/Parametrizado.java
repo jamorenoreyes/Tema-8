@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejerfiprueuni;
 
 import java.util.Arrays;
@@ -12,18 +7,22 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.Assert;
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 /**
  *
  * @author Juanan
  */
+@RunWith(Parameterized.class)
 public class Parametrizado {
+    Vendedores vende=new Vendedores(1,"Pedro","Vende_todo","Alicante","elche","Avda_Libertad");  //¿Tengo  que crear un objeto vendedor? ¿Tengo que inicializarlo?
     @Parameterized.Parameters
-    //¿Tengo que crear un objeto vendedor?
     public static Iterable data(){
-        return Arrays.asList(new Object[][]{{1,"Pedro","Vende_todo","Alicante","elche","Avda_Libertad"},{2,"Antonio","Numero_uno","Alicante","Alicante","Espronceda"},{3,"Luis","Charlatan","Alicante","Santa Pola","Pedro Juan"},{6,"Leopoldo","Vende_todo","Madrid","Alconbendas","Avda.Libertad"}});
-        }
+    return Arrays.asList(new Object[][]{{1,"Pedro","Vende_todo","Alicante","elche","Avda_Libertad"},
+    {2,"Antonio","Numero_uno","Alicante","Alicante","Espronceda"},{3,"Luis","Charlatan","Alicante","Santa Pola","Pedro Juan"},
+    {6,"Leopoldo","Vende_todo","Madrid","Alconbendas","Avda.Libertad"}});
+     }
     private int numvend;
     private String nomvend,nombrecomer,provincia,localidad,direccion;
     
@@ -36,15 +35,14 @@ public class Parametrizado {
     this.direccion.equals(direccion);
     }
     @Test
-    
     public void Eliminar_vendedor(){
-      // Vendedores.eliminar_Vendedor(numvend);    // tank.fill(relleno);
+      vende.eliminar_Vendedor(numvend);    
         //double nivel=tank.getTankLevel();
         //Assert.assertEquals(esperado,nivel,0.0);
     }
     
     public void Buscar_Vendedor(){
-       // Assert.assertArrayEquals(expecteds, actuals);
+      vende.buscar_Vendedor(numvend); // Assert.assertArrayEquals(expecteds, actuals);
     }
     
     @BeforeClass

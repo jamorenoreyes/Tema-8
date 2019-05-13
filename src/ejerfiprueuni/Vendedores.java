@@ -7,6 +7,10 @@ public Vendedores(){
 
  }
 
+    Vendedores(int i, String pedro, String vende_todo, String alicante, String elche, String avda_Libertad) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 public boolean anyadir_Vendedor(Vendedor vend){
 Vendedor temp;
     for(int x=0;x<vende.size();x++)
