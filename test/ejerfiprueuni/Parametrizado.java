@@ -9,10 +9,9 @@ import org.junit.Test;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 /**
  *
- * @author Juanan
+ * @author Juan Antonio Moreno Reyes
  */
 @RunWith(Parameterized.class)
 public class Parametrizado {
@@ -22,7 +21,7 @@ public class Parametrizado {
     return Arrays.asList(new Object[][]{{1,"Pedro","Vende_todo","Alicante","elche","Avda_Libertad"},
     {2,"Antonio","Numero_uno","Alicante","Alicante","Espronceda"},{3,"Luis","Charlatan","Alicante","Santa Pola","Pedro Juan"},
     {6,"Leopoldo","Vende_todo","Madrid","Alconbendas","Avda.Libertad"}});
-     }
+    }
     private int numvend;
     private String nomvend,nombrecomer,provincia,localidad,direccion;
     
