@@ -50,7 +50,7 @@ public class Parametrizado {
     @Before
     public void setUp() {
     Vendedor v1=new Vendedor(1,"Pedro","Vende_todo","Alicante","elche","Avda_Libertad");
-    Vendedor v2=new Vendedor(2,"Antonio","Numero_uno", "Valencia","Alicane","Espronceda");
+    Vendedor v2=new Vendedor(2,"Antonio","Numero_uno", "Valencia","Alicante","Espronceda");
     Vendedor v3=new Vendedor(3,"Luis","Charlatan","Alicante","Santa Pola","Pedro Juan");
     Vendedor v4=new Vendedor(4,"Paco","El_rapido","Alicante","Santa Pola","Torres_Quevedo");
     Vendedor v5=new Vendedor(5,"luis","Come_bolas","Valencia","Torrent","Calle_grande");
