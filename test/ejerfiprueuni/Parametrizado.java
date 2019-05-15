@@ -27,7 +27,7 @@ public class Parametrizado {
     
     
     public Parametrizado(String provincia, ArrayList <Vendedor>  VendedoresAlicante) {
-            this.provincia=provincia;
+     this.provincia=provincia;
     }
     @Test
     public void Eliminar_vendedor(){
