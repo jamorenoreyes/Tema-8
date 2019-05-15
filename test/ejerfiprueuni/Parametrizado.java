@@ -62,7 +62,6 @@ public class Parametrizado {
     VendedoresAlicante.add(v1);
     VendedoresAlicante.add(v3);
     VendedoresAlicante.add(v4);
-    
     }
     
     @After
