@@ -17,8 +17,8 @@ import org.junit.runners.Parameterized;
  * @author Juan Antonio Moreno Reyes
  */
 public class Parametrizadoentero {
-    Vendedores vend;
-    String parametro;
+    Vendedores todosVendedores;
+    String provincia;
     int resultado;
     
     @Parameterized.Parameters
@@ -29,7 +29,7 @@ public class Parametrizadoentero {
     }
     
     public Parametrizadoentero(String parametro, int resultado) {
-        this.parametro = parametro;
+        this.provincia = parametro;
         this.resultado = resultado;
     }
     
@@ -44,9 +44,9 @@ public class Parametrizadoentero {
     
      @Before
     public void setUp() {
-        vend = new Vendedores();
-        vend.anyadir_Vendedor(new Vendedor(0, "Pedro", "nombrecomercial", "Alicante", "Elche", "Avda.Libertad"));
-        vend.anyadir_Vendedor(new Vendedor(1, "Luis", "nombre", "Valencia", "Torrente", "calle nueva"));
+        todosVendedores = new Vendedores();
+        todosVendedores.anyadir_Vendedor(new Vendedor(0, "Pedro", "nombrecomercial", "Alicante", "Elche", "Avda.Libertad"));
+        todosVendedores.anyadir_Vendedor(new Vendedor(1, "Luis", "nombre", "Valencia", "Torrente", "calle nueva"));
     }
     
     @After
@@ -59,7 +59,7 @@ public class Parametrizadoentero {
     @Test
     public void testBuscar_Vendedor_String() {
         System.out.println("buscar_Vendedor");
-        ArrayList<Vendedor> result = vend.buscar_Vendedor(parametro);
+        ArrayList<Vendedor> result = todosVendedores.buscar_Vendedor(provincia);
         int b = result.size();
         Assert.assertEquals(resultado, b);
         // TODO review the generated test code and remove the default call to fail.
