@@ -1,5 +1,6 @@
 package ejerfiprueuni;
 import java.util.ArrayList;
+import java.util.Objects;
 public class Vendedores {
 protected ArrayList vende = new ArrayList();  
 
@@ -45,8 +46,8 @@ Vendedor temp;
     return false;
   }
   
-public ArrayList buscar_Vendedor(String provincia){
-    ArrayList vende1 = new ArrayList();  
+public Vendedores buscar_Vendedor(String provincia){
+    Vendedores vende1 = new Vendedores();  
    
     Vendedor temp;
     for(int x=0;x<vende.size();x++)
@@ -54,12 +55,37 @@ public ArrayList buscar_Vendedor(String provincia){
         temp=(Vendedor) vende.get(x);
         if(temp.getProvincia().equals(provincia)) 
             {
-            vende1.add(temp);
+            vende1.anyadir_Vendedor(temp);
             }
         }
 
     return vende1;
   }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 83 * hash + Objects.hashCode(this.vende);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vendedores other = (Vendedores) obj;
+        if (!Objects.equals(this.vende, other.vende)) {
+            return false;
+        }
+        return true;
+    }
 
 public void cargar_datos(String provincia){
 
